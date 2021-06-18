@@ -244,8 +244,7 @@ start_udpxy(char *wan_ifname)
 		"-m", wan_ifname,
 		"-p", nvram_safe_get("udpxy_enable_x"),
 		"-B", "65536",
-		"-c", nvram_safe_get("udpxy_clients"),
-		"-M", nvram_safe_get("udpxy_renew_period")
+		"-c", nvram_safe_get("udpxy_clients")
 		);
 }
 
@@ -958,4 +957,3 @@ set_libc_gai(int ipv4_first)
 		unlink("/etc/gai.conf");
 	}
 }
-
