@@ -472,9 +472,6 @@ function changeBgColorrl(obj, num){
 									<div> </div>
 									</div>
 									<table width="100%" align="center" cellpadding="4" cellspacing="0" class="table">
-									<tr> <th>运行状态:</th>
-                                            <td id="adbyby_status" colspan="3"></td>
-                                        </tr>
 										<tr >
 											<th width="50%">启用 Adbyby 功能 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
 											<td>
