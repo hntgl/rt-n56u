@@ -12,4 +12,3 @@ romfs:
 	$(ROMFSINST) /etc_ro/adbyby_host.sh
 	$(ROMFSINST) /etc_ro/adbyby_blockip.sh
 	$(ROMFSINST) -p +x $(THISDIR)/adbyby.sh /usr/bin/adbyby.sh
-  
