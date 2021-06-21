@@ -546,6 +546,11 @@ void start_adbyby(void);
 void restart_adbyby(void);
 void update_adb(void);
 #endif
+#if defined(APP_ADGUARDHOME)
+void stop_adguardhome(void);
+void start_adguardhome(void);
+void restart_adguardhome(void);
+#endif
 #if defined(APP_VLMCSD)
 void stop_vlmcsd(void);
 void start_vlmcsd(void);
