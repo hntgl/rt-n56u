@@ -377,8 +377,8 @@ function show_banner(L3){
 	show_top_status();
 }
 
-var tabtitle = new Array(16);
-var tablink = new Array(16);
+var tabtitle = new Array(17);
+var tablink = new Array(17);
 tabtitle[0] = new Array("", "<#menu5_1_1#>", "<#menu5_1_2#>", "<#menu5_1_3#>", "<#menu5_1_4#>", "<#menu5_1_5#>", "<#menu5_1_6#>");
 tabtitle[1] = new Array("", "<#menu5_1_1#>", "<#menu5_1_2#>", "<#menu5_1_3#>", "<#menu5_1_4#>", "<#menu5_1_5#>", "<#menu5_1_6#>");
 tabtitle[2] = new Array("", "<#menu5_2_1#>", "<#menu5_2_2#>", "<#menu5_2_3#>", "<#menu5_2_4#>", "<#menu5_2_5#>", "<#menu5_2_6#>");
@@ -404,7 +404,9 @@ if (found_app_mentohust()){
 if (found_app_adbyby()){
 	tabtitle[14] = new Array("", "<#menu5_20_1#>");
 }
-
+if (found_app_adguardhome()){
+	tabtitle[15] = new Array("", "<#menu5_29#>");
+}
 //Level 3 Tab title
 
 tablink[0] = new Array("", "Advanced_Wireless2g_Content.asp", "Advanced_WGuest2g_Content.asp", "Advanced_WMode2g_Content.asp", "Advanced_ACL2g_Content.asp", "Advanced_WSecurity2g_Content.asp", "Advanced_WAdvanced2g_Content.asp");
@@ -438,6 +440,11 @@ if (found_app_adbyby()){
 	tablink[14] = (ad_array);
 }
 
+if (found_app_adguardhome()){
+	adg_array = new Array("","Advanced_adguardhome.asp");
+	tablink[15] = (adg_array);
+}
+
 //Level 2 Menu
 menuL2_title = new Array(16)
 menuL2_title = new Array("", "<#menu5_11#>", "<#menu5_12#>", "<#menu5_2#>", "<#menu5_3#>", "<#menu5_5#>", "<#menu5_4#>", "<#menu5_6#>", "<#menu5_10#>", "<#menu5_9#>", "<#menu5_7#>");
@@ -461,6 +468,10 @@ if (found_app_adbyby()){
 	menuL2_title.push("<#menu5_20#>");
 } else menuL2_title.push("");
 
+if (found_app_adguardhome()){
+	menuL2_title.push("<#menu5_29#>");
+} else menuL2_title.push("");
+
 menuL2_link  = new Array("", tablink[0][1], tablink[1][1], tablink[2][1], tablink[3][1], tablink[4][1], tablink[5][1], tablink[6][1], tablink[7][1], support_2g_radio() ? tablink[8][1] : "Main_EStatus_Content.asp", tablink[9][1]);
 if (found_app_scutclient()){
 	menuL2_link.push(scutclient_array[1]);
@@ -480,6 +491,10 @@ if (found_app_mentohust()){
 
 if (found_app_adbyby()){
 	menuL2_link.push(ad_array[1]);
+} else menuL2_link.push("");
+
+if (found_app_adguardhome()){
+	menuL2_link.push(adg_array[1]);
 } else menuL2_link.push("");
 
 //Level 1 Menu in Gateway, Router mode
