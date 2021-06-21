@@ -202,6 +202,9 @@ endif
 ifneq ($(CONFIG_FIRMWARE_INCLUDE_ADBYBY),y)
 	rm -f $(INSTALLDIR)/www/Advanced_adbyby.asp
 endif
+ifneq ($(CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME),y)
+	rm -f $(INSTALLDIR)/www/Advanced_adguardhome.asp
+endif
 
 clean:
 	@echo "Clean www romfs"
