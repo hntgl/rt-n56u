@@ -422,6 +422,10 @@ struct nvram_pair router_defaults[] = {
 	{ "adbybyip_staticnum_x", "0" },
 	{ "adbybyrules_staticnum_x", "0" },
 
+	/* AdguargHome */
+	{ "adg_enable", "0" },
+	{ "adg_redirect", "0" },
+
 	{ "ip6_service", "" },
 	{ "ip6_ppe_on", "0" },
 	{ "ip6_wan_if", "0" },
