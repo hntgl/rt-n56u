@@ -410,6 +410,18 @@ struct nvram_pair router_defaults[] = {
 	{ "hdd_spindt", "0" },
 	{ "hdd_apmoff", "0" },
 
+	/*Adbyby PlUS+*/
+	{ "adbyby_enable", "0" },
+	{ "adbyby_set", "0" },
+	{ "adbyby_adb_update", "0" },
+	{ "adbyby_update", "2" },
+	{ "adbyby_update_hour", "03" },
+	{ "adbyby_update_min", "30" },
+	{ "adbyby_ip_x", "0" },
+	{ "adbyby_rules_x", "0" },
+	{ "adbybyip_staticnum_x", "0" },
+	{ "adbybyrules_staticnum_x", "0" },
+
 	{ "ip6_service", "" },
 	{ "ip6_ppe_on", "0" },
 	{ "ip6_wan_if", "0" },
@@ -906,6 +918,14 @@ struct nvram_pair tables_defaults[] = {
 	{ "dhcp_staticmac_x", "" },
 	{ "dhcp_staticip_x", "" },
 	{ "dhcp_staticname_x", "" },
+
+	{"adbybyip_mac_x", "" },
+	{"adbybyip_ip_x", "" },
+	{"adbybyip_name_x", "" },
+	{"adbybyip_ip_road_x", "" },
+
+	{"adbybyrules_x", "" },
+	{"adbybyrules_road_x", "" },
 
 	{ "vpns_user_x", "" },
 	{ "vpns_pass_x", "" },
