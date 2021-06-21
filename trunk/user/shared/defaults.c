@@ -421,6 +421,8 @@ struct nvram_pair router_defaults[] = {
 	{ "adbyby_rules_x", "0" },
 	{ "adbybyip_staticnum_x", "0" },
 	{ "adbybyrules_staticnum_x", "0" },
+	{ "block_ios", "0" },
+	{ "block_douyin", "0" },
 	{ "anti_ad", "0" },
 	{ "anti_ad_link", "https://gitee.com/privacy-protection-tools/anti-ad/raw/master/anti-ad-for-dnsmasq.conf" },
 	{ "anti_ad_count", "0" },
