@@ -15,6 +15,10 @@ if [ ! -f "/etc/storage/adbyby_adhost.sh" ] ; then
 cp -rf /etc_ro/adbyby_adhost.sh /etc/storage/
 chmod 755 "/etc/storage/adbyby_adhost.sh"
 fi
+if [ ! -f "/etc/storage/adbyby_host.sh" ] ; then
+cp -rf /etc_ro/adbyby_host.sh /etc/storage/
+chmod 755 "/etc/storage/adbyby_host.sh"
+fi
 if [ ! -f "/etc/storage/adbyby_blockip.sh" ] ; then
 cp -rf /etc_ro/adbyby_blockip.sh /etc/storage/
 chmod 755 "/etc/storage/adbyby_blockip.sh"
