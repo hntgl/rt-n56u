@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title><#Web_Title#> - adbyby</title>
+<title><#Web_Title#> - Adblock Plus</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
@@ -340,11 +340,11 @@ function showMDHCPList(){
 	else{
 	    for(var i = 0; i < m_dhcp.length; i++){
 		if(m_dhcp[i][3] == 0)
-		adbybyiproad="直连模式";
+		adbybyiproad="No filter Mode";
 		else if(m_dhcp[i][3] == 1){
-		adbybyiproad="全局模式";
+		adbybyiproad="Global mode";
 		}else if(m_dhcp[i][3] == 2){
-		adbybyiproad="Plus+模式";
+		adbybyiproad="Plus+ mode";
 		}
 		code +='<tr id="row' + i + '">';
 		code +='<td width="25%">&nbsp;' + m_dhcp[i][0] + '</td>';
@@ -370,9 +370,9 @@ function showMRULESList(){
 	else{
 	    for(var i = 0; i < m_rules.length; i++){
 		if(m_rules[i][1] == 0)
-		adbybyrulesroad="已禁用";
+		adbybyrulesroad="Disabled";
 		else{
-		adbybyrulesroad="已启用";
+		adbybyrulesroad="Activated";
 		}
 		code +='<tr id="rowrl' + i + '">';
 		code +='<td width="75%">&nbsp;' + m_rules[i][0] + '</td>';
@@ -463,17 +463,17 @@ function changeBgColorrl(obj, num){
                         </div>
 								<div class="row-fluid">
 									<div id="tabMenu" class="submenuBlock"></div>
-									<div class="alert alert-info" style="margin: 10px;">广告屏蔽大师 Plus + 可以全面过滤各种横幅、弹窗、视频广告，同时阻止跟踪、隐私窃取及各种恶意网站<br />
-									<div>Plus + 版本可以和 Hosts 结合方式运行，过滤广告不损失带宽</div>
+									<div class="alert alert-info" style="margin: 10px;">Adbyby Plus + can filter all kinds of banners, popups, video ads, and prevent tracking, privacy theft and a variety of malicious websites<br />
+									<div>Plus + version combination mode can operation with Adblock Plus Host,filtering ads without losing bandwidth</div>
 									<div>anti-AD项目地址:<a href="https://github.com/privacy-protection-tools/anti-AD">https://github.com/privacy-protection-tools/anti-AD</a></div>
-									<div>静态规则：【<% nvram_get_x("", "adbyby_ltime"); %>】 | 视频规则：【<% nvram_get_x("", "adbyby_vtime"); %>】</div>
-									<div>anti-AD规则：【<% nvram_get_x("", "anti_ad_count"); %>】条 | Hosts AD：【<% nvram_get_x("", "adbyby_hostsad"); %>】条</div>
-									<div>第三方规则：【<% nvram_get_x("", "adbyby_user"); %>】条</div>
+									<div>Static rules：【<% nvram_get_x("", "adbyby_ltime"); %>】 | Video rules：【<% nvram_get_x("", "adbyby_vtime"); %>】</div>
+									<div>anti-AD rules：【<% nvram_get_x("", "anti_ad_count"); %>】item | Hosts AD：【<% nvram_get_x("", "adbyby_hostsad"); %>】item</div>
+									<div>Third party rules：【<% nvram_get_x("", "adbyby_user"); %>】item</div>
 									<div> </div>
 									</div>
 									<table width="100%" align="center" cellpadding="4" cellspacing="0" class="table">
 										<tr >
-											<th width="50%">启用 Adbyby 功能 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+											<th width="50%">Enable Adbyby feature &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
 											<td>
 													<div class="main_itoggle">
 													<div id="adbyby_enable_on_of">
@@ -488,34 +488,34 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<th width="50%">
-											<a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 0, 1);">过滤方案选择:</a></th>
+											<a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 0, 1);">Filtering scheme selection:</a></th>
 											<td>
 												<select name="adbyby_set" class="input">
-													<option value="0" <% nvram_match_x("","adbyby_set", "0","selected"); %>>全局模式（推荐），全部IP走adbyby过滤</option>
-													<option value="1" <% nvram_match_x("","adbyby_set", "1","selected"); %>>Plus + 模式(只过滤列表内域名结合ABP名单)</option>
-													<option value="2" <% nvram_match_x("","adbyby_set", "2","selected"); %>>内网IP列表控制模式</option>
+													<option value="0" <% nvram_match_x("","adbyby_set", "0","selected"); %>>Global mode (recommended), all IPs are filtered by adbyby</option>
+													<option value="1" <% nvram_match_x("","adbyby_set", "1","selected"); %>>Plus + mode (only filter the domain names in the list combined with the ABP list)</option>
+													<option value="2" <% nvram_match_x("","adbyby_set", "2","selected"); %>>Intranet IP list control mode</option>
 												</select>
 											</td>
 										</tr>
 										<tr id="adbyby_update_tr">
-											<th>规则自动更新:</th>
+											<th>Rules are automatically updated:</th>
 											<td>
 												<select name="adbyby_update" class="input" style="width: 60px;">
-													<option value="0" <% nvram_match_x("","adbyby_update", "0","selected"); %>>每天</option>
-													<option value="1" <% nvram_match_x("","adbyby_update", "1","selected"); %>>每隔</option>
-													<option value="2" <% nvram_match_x("","adbyby_update", "2","selected"); %>>关闭</option>
+													<option value="0" <% nvram_match_x("","adbyby_update", "0","selected"); %>>every day</option>
+													<option value="1" <% nvram_match_x("","adbyby_update", "1","selected"); %>>Every other</option>
+													<option value="2" <% nvram_match_x("","adbyby_update", "2","selected"); %>>close</option>
 												</select>
 												 <select name="adbyby_update_hour" id="adbyby_update_hour" class="input" style="width: 50px">
 
-                                                </select>时
+                                                </select>Time
 												<select name="adbyby_update_min" id="adbyby_update_min" class="input" style="width: 50px">
 
-                                                </select>分
+                                                </select>Minute
 											</td>
 										</tr>
 										<tr>
 											<th width="50%">
-											拦截 Apple iOS 的OTA更新:</th>
+											Block Apple iOS OTA updates:</th>
 											<td>
 													<div class="main_itoggle">
 													<div id="block_ios_on_of">
@@ -530,7 +530,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<th width="50%">
-											拦截 抖音 APP 和网站:</th>
+											Block Douyin apps and websites:</th>
 											<td>
 													<div class="main_itoggle">
 													<div id="block_douyin_on_of">
@@ -545,7 +545,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<th width="50%">
-											<a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 2, 1);">加载anti-AD项目规则:</a></th>
+											<a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 2, 1);">Load anti-AD project rules:</a></th>
 											<td>
 													<div class="main_itoggle">
 													<div id="anti_ad_on_of">
@@ -559,13 +559,13 @@ function changeBgColorrl(obj, num){
 											</td>
 										</tr>
 										<tr>
-                                            <th width="50%">加载anti-AD下载地址:</th>
+                                            <th width="50%">Load anti-AD download address:</th>
                                             <td>
                                                 <input type="text"  class="input" size="60" name="anti_ad_link" value="<% nvram_get_x("","anti_ad_link"); %>" />
                                             </td>
                                         </tr>
 										<tr>
-											<th width="50%">加载hosts规则</th>
+											<th width="50%">Load hosts rules</th>
 											<td>
 													<div class="main_itoggle">
 													<div id="hosts_ad_on_of">
@@ -580,7 +580,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<td colspan="3">
-												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script15')"><span>hosts规则下载列表(一行一个地址):</span></a>
+												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script15')"><span>Download list of hosts rules (one address per line):</span></a>
 												<div id="script15">
 													<textarea rows="8" wrap="off" spellcheck="false" maxlength="314571" class="span12" name="scripts.adbyby_host.sh" style="font-family:'Courier New'; font-size:12px;"><% nvram_dump("scripts.adbyby_host.sh",""); %></textarea>
 												</div>
@@ -589,10 +589,10 @@ function changeBgColorrl(obj, num){
 										</table>
 										<table width="100%" align="center" cellpadding="4" cellspacing="0" class="table">
                                         <tr>
-                                            <th colspan="5" id="GWStatic" style="background-color: #E3E3E3;">自定义IP过滤设置</th>
+                                            <th colspan="5" id="GWStatic" style="background-color: #E3E3E3;">Custom IP filter settings</th>
                                         </tr>
                                         <tr>
-                                            <th colspan="2" width="50%">启用内网过滤控制</th>
+                                            <th colspan="2" width="50%">Enable intranet filtering control</th>
                                             <td colspan="2" width="50%">
                                                 <div class="main_itoggle">
                                                     <div id="adbyby_ip_x_on_of">
@@ -619,7 +619,7 @@ function changeBgColorrl(obj, num){
                                                 <#LANHostConfig_ManualName_itemname#> <a href="javascript:sortbyName();" style="outline:0;"><i class="icon-circle-arrow-down"></i></a>
                                             </th>
 											<th width="20%">
-                                                过滤模式 <a href="javascript:sortbyName();" style="outline:0;"><i class="icon-circle-arrow-down"></i></a>
+                                                Filter mode <a href="javascript:sortbyName();" style="outline:0;"><i class="icon-circle-arrow-down"></i></a>
                                             </th>
                                             <th width="5%">
                                                 <center><a href="javascript:sortbyId();" style="outline:0;"><i class="icon-th-list"></i></a></center>
@@ -641,9 +641,9 @@ function changeBgColorrl(obj, num){
                                             </td>
 											 <td width="20%">
                                           	<select name="adbybyip_ip_road_x_0" class="input" style="width: 110px">
-													<option value="0" <% nvram_match_x("","adbybyip_ip_road_x_0", "0","selected"); %>>直连模式</option>
-													<option value="1" <% nvram_match_x("","adbybyip_ip_road_x_0", "1","selected"); %>>全局模式</option>
-													<option value="2" <% nvram_match_x("","adbybyip_ip_road_x_0", "2","selected"); %>>plus+模式</option>
+													<option value="0" <% nvram_match_x("","adbybyip_ip_road_x_0", "0","selected"); %>>Direct connection mode</option>
+													<option value="1" <% nvram_match_x("","adbybyip_ip_road_x_0", "1","selected"); %>>Global mode</option>
+													<option value="2" <% nvram_match_x("","adbybyip_ip_road_x_0", "2","selected"); %>>plus+mode</option>
 												</select>
                                             </td>
                                             <td width="5%">
@@ -658,10 +658,10 @@ function changeBgColorrl(obj, num){
                                     </table>
 									 <table width="100%" align="center" cellpadding="5" cellspacing="0" class="table">
                                         <tr>
-                                            <th colspan="5" id="GWStatic" style="background-color: #E3E3E3;">第三方过滤规则</th>
+                                            <th colspan="5" id="GWStatic" style="background-color: #E3E3E3;">Third-party filtering rules</th>
                                         </tr>
                                         <tr>
-                                            <th width="50%">启用第三方过滤规则</th>
+                                            <th width="50%">Enable third-party filtering rules</th>
                                             <td width="50%">
                                                 <div class="main_itoggle">
                                                     <div id="adbyby_rules_x_on_of">
@@ -680,10 +680,10 @@ function changeBgColorrl(obj, num){
                                         <tr id="row_rules_caption" style="display:none">
 										 
                                             <th width="85%">
-                                                规则地址 <i class="icon-circle-arrow-down"></i>
+                                                Rule address <i class="icon-circle-arrow-down"></i>
                                             </th>
 											<th width="10%">
-                                                状态 <i class="icon-circle-arrow-down"></i>
+                                                status <i class="icon-circle-arrow-down"></i>
                                             </th>
                                             <th width="5%">
                                                 <center><i class="icon-th-list"></i></center>
@@ -695,8 +695,8 @@ function changeBgColorrl(obj, num){
                                             </td>
 											 <td width="10%">
                                           	<select name="adbybyrules_road_x_0" class="input" style="width: 65px">
-													<option value="0" <% nvram_match_x("","adbybyrules_road_x_0", "0","selected"); %>>禁用</option>
-													<option value="1" <% nvram_match_x("","adbybyrules_road_x_0", "1","selected"); %>>启用</option>
+													<option value="0" <% nvram_match_x("","adbybyrules_road_x_0", "0","selected"); %>>Disable</option>
+													<option value="1" <% nvram_match_x("","adbybyrules_road_x_0", "1","selected"); %>>Enable</option>
 												</select>
                                             </td>
                                             <td width="5%">
@@ -712,7 +712,7 @@ function changeBgColorrl(obj, num){
 									<table class="table">
 										<tr>
 											<td colspan="3" >
-												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script9')"><span>Plus+ 模式过滤的域名:</span></a>
+												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script9')"><span>Plus+ Pattern filtered domain name:</span></a>
 												<div id="script9">
 													<textarea rows="8" wrap="off" spellcheck="false" maxlength="314571" class="span12" name="scripts.adbyby_adhost.sh" style="font-family:'Courier New'; font-size:12px;"><% nvram_dump("scripts.adbyby_adhost.sh",""); %></textarea>
 												</div>
@@ -720,7 +720,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<td colspan="3" style="border-top: 0 none;">
-												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script10')"><span>域名白名单:</span></a>
+												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script10')"><span>Domain name whitelist:</span></a>
 												<div id="script10" style="display:none;">
 													<textarea rows="24" wrap="off" spellcheck="false" maxlength="314571" class="span12" name="scripts.adbyby_adesc.sh" style="font-family:'Courier New'; font-size:12px;"><% nvram_dump("scripts.adbyby_adesc.sh",""); %></textarea>
 												</div>
@@ -728,7 +728,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<td colspan="3" style="border-top: 0 none;">
-												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script11')"><span>IP黑名单:</span></a>
+												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script11')"><span>IP blacklist:</span></a>
 												<div id="script11" style="display:none;">
 													<textarea rows="24" wrap="off" spellcheck="false" maxlength="314571" class="span12" name="scripts.adbyby_blockip.sh" style="font-family:'Courier New'; font-size:12px;"><% nvram_dump("scripts.adbyby_blockip.sh",""); %></textarea>
 												</div>
@@ -736,7 +736,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<td colspan="3" style="border-top: 0 none;">
-												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script12')"><span>域名黑名单:</span></a>
+												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script12')"><span>Domain blacklist:</span></a>
 												<div id="script12" style="display:none;">
 													<textarea rows="24" wrap="off" spellcheck="false" maxlength="314571" class="span12" name="scripts.adbyby_adblack.sh" style="font-family:'Courier New'; font-size:12px;"><% nvram_dump("scripts.adbyby_adblack.sh",""); %></textarea>
 												</div>
@@ -744,7 +744,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<td colspan="3" style="border-top: 0 none;">
-												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script13')"><span>用户自定义规则:</span></a>
+												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script13')"><span>User-defined rules:</span></a>
 												<div id="script13" style="display:none;">
 													<textarea rows="8" wrap="off" spellcheck="false" maxlength="314571" class="span12" name="scripts.adbyby_rules.sh" style="font-family:'Courier New'; font-size:12px;"><% nvram_dump("scripts.adbyby_rules.sh",""); %></textarea>
 												</div>
