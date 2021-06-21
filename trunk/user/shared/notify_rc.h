@@ -66,6 +66,7 @@
 #define RCN_RESTART_VLMCSD		"restart_vlmcsd"
 #define RCN_RESTART_SHADOWSOCKS	"restart_shadowsocks"
 #define RCN_RESTART_ADBYBY		"restart_adbyby"
+#define RCN_RESTART_ADGUARDHOME		"restart_adguardhome"
 #define RCN_RESTART_UPDATEADB	"update_adb"
 #define RCN_RESTART_CHNROUTE_UPD	"restart_chnroute_upd"
 #define RCN_RESTART_DNSFORWARDER	"restart_dns_forwarder"
