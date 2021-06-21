@@ -377,8 +377,8 @@ function show_banner(L3){
 	show_top_status();
 }
 
-var tabtitle = new Array(15);
-var tablink = new Array(15);
+var tabtitle = new Array(16);
+var tablink = new Array(16);
 tabtitle[0] = new Array("", "<#menu5_1_1#>", "<#menu5_1_2#>", "<#menu5_1_3#>", "<#menu5_1_4#>", "<#menu5_1_5#>", "<#menu5_1_6#>");
 tabtitle[1] = new Array("", "<#menu5_1_1#>", "<#menu5_1_2#>", "<#menu5_1_3#>", "<#menu5_1_4#>", "<#menu5_1_5#>", "<#menu5_1_6#>");
 tabtitle[2] = new Array("", "<#menu5_2_1#>", "<#menu5_2_2#>", "<#menu5_2_3#>", "<#menu5_2_4#>", "<#menu5_2_5#>", "<#menu5_2_6#>");
@@ -400,6 +400,9 @@ if (found_app_shadowsocks()){
 }
 if (found_app_mentohust()){
 	tabtitle[13] = new Array("", "<#menu5_1_1#>","<#menu5_13_log#>");
+}
+if (found_app_adbyby()){
+	tabtitle[14] = new Array("", "<#menu5_20_1#>");
 }
 
 //Level 3 Tab title
@@ -430,9 +433,13 @@ if (found_app_mentohust()){
 	mentohust_array = new Array("","mentohust.asp","mentohust_log.asp");
 	tablink[13] = (mentohust_array);
 }
+if (found_app_adbyby()){
+	ad_array = new Array("","Advanced_adbyby.asp");
+	tablink[14] = (ad_array);
+}
 
 //Level 2 Menu
-menuL2_title = new Array(15)
+menuL2_title = new Array(16)
 menuL2_title = new Array("", "<#menu5_11#>", "<#menu5_12#>", "<#menu5_2#>", "<#menu5_3#>", "<#menu5_5#>", "<#menu5_4#>", "<#menu5_6#>", "<#menu5_10#>", "<#menu5_9#>", "<#menu5_7#>");
 if (found_app_scutclient()){
 	menuL2_title.push("<#menu5_13#>");
@@ -450,6 +457,9 @@ if (found_app_mentohust()){
 	menuL2_title.push("mentohust");
 } else menuL2_title.push("");
 
+if (found_app_adbyby()){
+	menuL2_title.push("<#menu5_20#>");
+} else menuL2_title.push("");
 
 menuL2_link  = new Array("", tablink[0][1], tablink[1][1], tablink[2][1], tablink[3][1], tablink[4][1], tablink[5][1], tablink[6][1], tablink[7][1], support_2g_radio() ? tablink[8][1] : "Main_EStatus_Content.asp", tablink[9][1]);
 if (found_app_scutclient()){
@@ -466,6 +476,10 @@ if (found_app_shadowsocks()){
 
 if (found_app_mentohust()){
 	menuL2_link.push(mentohust_array[1]);
+} else menuL2_link.push("");
+
+if (found_app_adbyby()){
+	menuL2_link.push(ad_array[1]);
 } else menuL2_link.push("");
 
 //Level 1 Menu in Gateway, Router mode
