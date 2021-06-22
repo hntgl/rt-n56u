@@ -465,7 +465,7 @@ function changeBgColorrl(obj, num){
 									<div id="tabMenu" class="submenuBlock"></div>
 									<div class="alert alert-info" style="margin: 10px;">Adbyby Plus + can filter all kinds of banners, popups, video ads, and prevent tracking, privacy theft and a variety of malicious websites<br />
 									<div>Plus + version combination mode can operation with Adblock Plus Host,filtering ads without losing bandwidth</div>
-									<div>anti-AD项目地址:<a href="https://github.com/privacy-protection-tools/anti-AD">https://github.com/privacy-protection-tools/anti-AD</a></div>
+									<div>Anti-Adblock:<a href="https://github.com/privacy-protection-tools/anti-AD">https://github.com/privacy-protection-tools/anti-AD</a></div>
 									<div>Static rules：【<% nvram_get_x("", "adbyby_ltime"); %>】 | Video rules：【<% nvram_get_x("", "adbyby_vtime"); %>】</div>
 									<div>anti-AD rules：【<% nvram_get_x("", "anti_ad_count"); %>】item | Hosts AD：【<% nvram_get_x("", "adbyby_hostsad"); %>】item</div>
 									<div>Third party rules：【<% nvram_get_x("", "adbyby_user"); %>】item</div>
