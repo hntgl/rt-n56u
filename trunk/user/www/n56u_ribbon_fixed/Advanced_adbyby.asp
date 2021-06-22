@@ -340,11 +340,11 @@ function showMDHCPList(){
 	else{
 	    for(var i = 0; i < m_dhcp.length; i++){
 		if(m_dhcp[i][3] == 0)
-		adbybyiproad="No filter Mode";
+		adbybyiproad="No Filter Mode";
 		else if(m_dhcp[i][3] == 1){
-		adbybyiproad="Global mode";
+		adbybyiproad="Global Mode";
 		}else if(m_dhcp[i][3] == 2){
-		adbybyiproad="Plus+ mode";
+		adbybyiproad="Plus+ Mode";
 		}
 		code +='<tr id="row' + i + '">';
 		code +='<td width="25%">&nbsp;' + m_dhcp[i][0] + '</td>';
@@ -488,34 +488,34 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<th width="50%">
-											<a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 0, 1);">Filtering scheme selection:</a></th>
+											<a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 0, 1);">Running Mode:</a></th>
 											<td>
 												<select name="adbyby_set" class="input">
-													<option value="0" <% nvram_match_x("","adbyby_set", "0","selected"); %>>Global Mode (The slowest and the best effects)</option>
-													<option value="1" <% nvram_match_x("","adbyby_set", "1","selected"); %>>Plus + Mode (Filter domain name list and blacklist website.Recommended)</option>
-													<option value="2" <% nvram_match_x("","adbyby_set", "2","selected"); %>>No filter Mode (Must set in Client Filter Mode Settings manually)</option>
+													<option value="0" <% nvram_match_x("","adbyby_set", "0","selected"); %>>Global Mode</option>
+													<option value="1" <% nvram_match_x("","adbyby_set", "1","selected"); %>>Plus + Mode </option>
+													<option value="2" <% nvram_match_x("","adbyby_set", "2","selected"); %>>No filter Mode</option>
 												</select>
 											</td>
 										</tr>
 										<tr id="adbyby_update_tr">
-											<th>Rules are automatically updated:</th>
+											<th>Time to Auto Update Adbyby Rules:</th>
 											<td>
-												<select name="adbyby_update" class="input" style="width: 60px;">
-													<option value="0" <% nvram_match_x("","adbyby_update", "0","selected"); %>>every day</option>
-													<option value="1" <% nvram_match_x("","adbyby_update", "1","selected"); %>>Every other</option>
-													<option value="2" <% nvram_match_x("","adbyby_update", "2","selected"); %>>close</option>
+												<select name="adbyby_update" class="input" style="width: 80px;">
+													<option value="0" <% nvram_match_x("","adbyby_update", "0","selected"); %>>Every day</option>
+													<option value="1" <% nvram_match_x("","adbyby_update", "1","selected"); %>>Every</option>
+													<option value="2" <% nvram_match_x("","adbyby_update", "2","selected"); %>>Off</option>
 												</select>
 												 <select name="adbyby_update_hour" id="adbyby_update_hour" class="input" style="width: 50px">
 
-                                                </select>Time
+                                                </select> Hour
 												<select name="adbyby_update_min" id="adbyby_update_min" class="input" style="width: 50px">
 
-                                                </select>Minute
+                                                </select> Minute
 											</td>
 										</tr>
 										<tr>
 											<th width="50%">
-											Block Apple iOS OTA updates:</th>
+											Block Apple iOS OTA update:</th>
 											<td>
 													<div class="main_itoggle">
 													<div id="block_ios_on_of">
@@ -530,22 +530,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<th width="50%">
-											Block Douyin apps and websites:</th>
-											<td>
-													<div class="main_itoggle">
-													<div id="block_douyin_on_of">
-														<input type="checkbox" id="block_douyin_fake" <% nvram_match_x("", "block_douyin", "1", "value=1 checked"); %><% nvram_match_x("", "block_douyin", "0", "value=0"); %>  />
-													</div>
-												</div>
-												<div style="position: absolute; margin-left: -10000px;">
-													<input type="radio" value="1" name="block_douyin" id="block_douyin_1" class="input" value="1" <% nvram_match_x("", "block_douyin", "1", "checked"); %> /><#checkbox_Yes#>
-													<input type="radio" value="0" name="block_douyin" id="block_douyin_0" class="input" value="0" <% nvram_match_x("", "block_douyin", "0", "checked"); %> /><#checkbox_No#>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<th width="50%">
-											<a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 2, 1);">Load anti-AD project rules:</a></th>
+											<a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 2, 1);">Enable  anti-AD  Blocker?:</a></th>
 											<td>
 													<div class="main_itoggle">
 													<div id="anti_ad_on_of">
@@ -559,13 +544,13 @@ function changeBgColorrl(obj, num){
 											</td>
 										</tr>
 										<tr>
-                                            <th width="50%">Load anti-AD download address:</th>
+                                            <th width="50%">Anti-AD Blocker URL:</th>
                                             <td>
                                                 <input type="text"  class="input" size="60" name="anti_ad_link" value="<% nvram_get_x("","anti_ad_link"); %>" />
                                             </td>
                                         </tr>
 										<tr>
-											<th width="50%">Load hosts rules</th>
+											<th width="50%">Enable Hosts Rules?</th>
 											<td>
 													<div class="main_itoggle">
 													<div id="hosts_ad_on_of">
@@ -580,7 +565,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<td colspan="3">
-												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script15')"><span>Download list of hosts rules (one address per line):</span></a>
+												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script15')"><span>ABP Host List (one url per line):</span></a>
 												<div id="script15">
 													<textarea rows="8" wrap="off" spellcheck="false" maxlength="314571" class="span12" name="scripts.adbyby_host.sh" style="font-family:'Courier New'; font-size:12px;"><% nvram_dump("scripts.adbyby_host.sh",""); %></textarea>
 												</div>
@@ -589,10 +574,10 @@ function changeBgColorrl(obj, num){
 										</table>
 										<table width="100%" align="center" cellpadding="4" cellspacing="0" class="table">
                                         <tr>
-                                            <th colspan="5" id="GWStatic" style="background-color: #E3E3E3;">Custom IP filter settings</th>
+                                            <th colspan="5" id="GWStatic" style="background-color: #E3E3E3;">Client Filter Mode Settings</th>
                                         </tr>
                                         <tr>
-                                            <th colspan="2" width="50%">Enable intranet filtering control</th>
+                                            <th colspan="2" width="50%">Enable Client Filter Control?</th>
                                             <td colspan="2" width="50%">
                                                 <div class="main_itoggle">
                                                     <div id="adbyby_ip_x_on_of">
@@ -619,7 +604,7 @@ function changeBgColorrl(obj, num){
                                                 <#LANHostConfig_ManualName_itemname#> <a href="javascript:sortbyName();" style="outline:0;"><i class="icon-circle-arrow-down"></i></a>
                                             </th>
 											<th width="20%">
-                                                Filter mode <a href="javascript:sortbyName();" style="outline:0;"><i class="icon-circle-arrow-down"></i></a>
+                                                Filter Mode <a href="javascript:sortbyName();" style="outline:0;"><i class="icon-circle-arrow-down"></i></a>
                                             </th>
                                             <th width="5%">
                                                 <center><a href="javascript:sortbyId();" style="outline:0;"><i class="icon-th-list"></i></a></center>
@@ -641,9 +626,9 @@ function changeBgColorrl(obj, num){
                                             </td>
 											 <td width="20%">
                                           	<select name="adbybyip_ip_road_x_0" class="input" style="width: 110px">
-													<option value="0" <% nvram_match_x("","adbybyip_ip_road_x_0", "0","selected"); %>>Direct connection mode</option>
-													<option value="1" <% nvram_match_x("","adbybyip_ip_road_x_0", "1","selected"); %>>Global mode</option>
-													<option value="2" <% nvram_match_x("","adbybyip_ip_road_x_0", "2","selected"); %>>plus+mode</option>
+													<option value="0" <% nvram_match_x("","adbybyip_ip_road_x_0", "0","selected"); %>>No filter</option>
+													<option value="1" <% nvram_match_x("","adbybyip_ip_road_x_0", "1","selected"); %>>Global filter</option>
+													<option value="2" <% nvram_match_x("","adbybyip_ip_road_x_0", "2","selected"); %>>Plus + Mode</option>
 												</select>
                                             </td>
                                             <td width="5%">
@@ -658,10 +643,10 @@ function changeBgColorrl(obj, num){
                                     </table>
 									 <table width="100%" align="center" cellpadding="5" cellspacing="0" class="table">
                                         <tr>
-                                            <th colspan="5" id="GWStatic" style="background-color: #E3E3E3;">Third-party filtering rules</th>
+                                            <th colspan="5" id="GWStatic" style="background-color: #E3E3E3;">3rd-party Filers Rules</th>
                                         </tr>
                                         <tr>
-                                            <th width="50%">Enable third-party filtering rules</th>
+                                            <th width="50%">Enable 3rd-party Filers Rules?</th>
                                             <td width="50%">
                                                 <div class="main_itoggle">
                                                     <div id="adbyby_rules_x_on_of">
@@ -680,10 +665,10 @@ function changeBgColorrl(obj, num){
                                         <tr id="row_rules_caption" style="display:none">
 										 
                                             <th width="85%">
-                                                Rule address <i class="icon-circle-arrow-down"></i>
+                                                URL Filter List <i class="icon-circle-arrow-down"></i>
                                             </th>
 											<th width="10%">
-                                                status <i class="icon-circle-arrow-down"></i>
+                                                Status <i class="icon-circle-arrow-down"></i>
                                             </th>
                                             <th width="5%">
                                                 <center><i class="icon-th-list"></i></center>
@@ -694,7 +679,7 @@ function changeBgColorrl(obj, num){
                                                 <input type="text" maxlength="255" class="span12" size="200" name="adbybyrules_x_0" value="<% nvram_get_x("", "adbybyrules_x_0"); %>" onKeyPress="return is_string(this,event);"/>
                                             </td>
 											 <td width="10%">
-                                          	<select name="adbybyrules_road_x_0" class="input" style="width: 65px">
+                                          	<select name="adbybyrules_road_x_0" class="input" style="width: 80px">
 													<option value="0" <% nvram_match_x("","adbybyrules_road_x_0", "0","selected"); %>>Disable</option>
 													<option value="1" <% nvram_match_x("","adbybyrules_road_x_0", "1","selected"); %>>Enable</option>
 												</select>
@@ -712,7 +697,7 @@ function changeBgColorrl(obj, num){
 									<table class="table">
 										<tr>
 											<td colspan="3" >
-												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script9')"><span>Plus+ Pattern filtered domain name:</span></a>
+												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script9')"><span>Plus+ Domain List:</span></a>
 												<div id="script9">
 													<textarea rows="8" wrap="off" spellcheck="false" maxlength="314571" class="span12" name="scripts.adbyby_adhost.sh" style="font-family:'Courier New'; font-size:12px;"><% nvram_dump("scripts.adbyby_adhost.sh",""); %></textarea>
 												</div>
@@ -720,7 +705,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<td colspan="3" style="border-top: 0 none;">
-												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script10')"><span>Domain name whitelist:</span></a>
+												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script10')"><span>Bypass Domain List:</span></a>
 												<div id="script10" style="display:none;">
 													<textarea rows="24" wrap="off" spellcheck="false" maxlength="314571" class="span12" name="scripts.adbyby_adesc.sh" style="font-family:'Courier New'; font-size:12px;"><% nvram_dump("scripts.adbyby_adesc.sh",""); %></textarea>
 												</div>
@@ -728,7 +713,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<td colspan="3" style="border-top: 0 none;">
-												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script11')"><span>IP blacklist:</span></a>
+												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script11')"><span>Black IP List:</span></a>
 												<div id="script11" style="display:none;">
 													<textarea rows="24" wrap="off" spellcheck="false" maxlength="314571" class="span12" name="scripts.adbyby_blockip.sh" style="font-family:'Courier New'; font-size:12px;"><% nvram_dump("scripts.adbyby_blockip.sh",""); %></textarea>
 												</div>
@@ -736,7 +721,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<td colspan="3" style="border-top: 0 none;">
-												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script12')"><span>Domain blacklist:</span></a>
+												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script12')"><span>Black Domain List:</span></a>
 												<div id="script12" style="display:none;">
 													<textarea rows="24" wrap="off" spellcheck="false" maxlength="314571" class="span12" name="scripts.adbyby_adblack.sh" style="font-family:'Courier New'; font-size:12px;"><% nvram_dump("scripts.adbyby_adblack.sh",""); %></textarea>
 												</div>
@@ -744,7 +729,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<td colspan="3" style="border-top: 0 none;">
-												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script13')"><span>User-defined rules:</span></a>
+												<i class="icon-hand-right"></i> <a href="javascript:spoiler_toggle('script13')"><span>User-defined Rule:</span></a>
 												<div id="script13" style="display:none;">
 													<textarea rows="8" wrap="off" spellcheck="false" maxlength="314571" class="span12" name="scripts.adbyby_rules.sh" style="font-family:'Courier New'; font-size:12px;"><% nvram_dump("scripts.adbyby_rules.sh",""); %></textarea>
 												</div>
