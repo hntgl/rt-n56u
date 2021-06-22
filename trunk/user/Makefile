@@ -132,6 +132,7 @@ dir_$(CONFIG_FIRMWARE_INCLUDE_RPL2TP)		+= rp-l2tp
 dir_y						+= lldt
 dir_y						+= scripts
 dir_$(CONFIG_FIRMWARE_INCLUDE_SMARTDNS)	+= smartdns
+dir_$(CONFIG_FIRMWARE_INCLUDE_ADGUARDHOME)		+= adguardhome
 dir_$(OPENSSH_ENABLED)				+= openssh
 dir_$(DROPBEAR_ENABLED)				+= dropbear
 dir_$(CONFIG_FIRMWARE_INCLUDE_HTOP)		+= htop
@@ -210,6 +211,7 @@ dir_$(CONFIG_FIRMWARE_INCLUDE_TRANSMISSION)	+= transmission
 dir_$(CONFIG_FIRMWARE_INCLUDE_ARIA)		+= aria2
 endif
 
+dir_$(CONFIG_FIRMWARE_INCLUDE_ADBYBY)		+= adbyby
 ifdef CONFIG_MTD_UBI
 ifneq ($(STORAGE_ENABLED),y)
 dir_y						+= optware

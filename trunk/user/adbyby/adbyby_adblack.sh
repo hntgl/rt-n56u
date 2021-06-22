@@ -1,0 +1,17 @@
+https://pagead.googlesyndication.com
+https://pagead2.googlesyndication.com
+https://pagead2.googleadservices.com
+https://adservetx.media.net
+https://doubleclick.net/
+https://ad.doubleclick.net/
+https://media.fastclick.net/
+https://cdn.fastclick.net/
+https://aan.amazon.com
+https://aax.amazon-adsystem.com
+https://amazon-adsystem.com
+https://assoc-amazon.com
+https://c.amazon-adsystem.com
+https://mads.amazon-adsystem.com
+https://google-analytics.com
+https://hotjar.com
+https://static.hotjar.com

@@ -347,6 +347,45 @@ void update_gfwlist(void){
 
 #endif
 
+#if defined(APP_ADBYBY)
+void stop_adbyby(void){
+	eval("/usr/bin/adbyby.sh","stop");
+}
+
+void start_adbyby(void){
+	int adbyby_mode = nvram_get_int("adbyby_enable");
+	if ( adbyby_mode == 1)
+		eval("/usr/bin/adbyby.sh","start");
+}
+
+void restart_adbyby(void){
+	stop_adbyby();
+	start_adbyby();
+}
+
+void update_adb(void){
+	eval("/usr/bin/adbyby.sh","updateadb");
+}
+#endif
+
+#if defined(APP_ADGUARDHOME)
+void stop_adguardhome(void){
+	eval("/usr/bin/adguardhome.sh","stop");
+}
+
+void start_adguardhome(void){
+	int adg_mode = nvram_get_int("adg_enable");
+	if ( adg_mode == 1)
+		eval("/usr/bin/adguardhome.sh","start");
+}
+
+void restart_adguardhome(void){
+	stop_adguardhome();
+	start_adguardhome();
+}
+
+#endif
+
 #if defined(APP_VLMCSD)
 void stop_vlmcsd(void){
 	eval("/usr/bin/vlmcsd.sh","stop");
@@ -609,6 +648,9 @@ start_services_once(int is_ap_mode)
 	start_ss();
 	start_ss_tunnel();
 #endif
+#if defined(APP_ADBYBY)
+	start_adbyby();
+#endif
 #if defined(APP_TTYD)
 	start_ttyd();
 #endif
@@ -651,6 +693,12 @@ stop_services(int stopall)
 #endif
 #if defined(APP_MENTOHUST)
 	stop_mentohust();
+#endif
+#if defined(APP_ADBYBY)
+	stop_adbyby();
+#endif
+#if defined(APP_ADGUARDHOME)
+	stop_adguardhome();
 #endif
 #if defined(APP_TTYD)
 	stop_ttyd();
