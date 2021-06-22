@@ -493,7 +493,7 @@ function changeBgColorrl(obj, num){
 												<select name="adbyby_set" class="input">
 													<option value="0" <% nvram_match_x("","adbyby_set", "0","selected"); %>>Global Mode</option>
 													<option value="1" <% nvram_match_x("","adbyby_set", "1","selected"); %>>Plus + Mode </option>
-													<option value="2" <% nvram_match_x("","adbyby_set", "2","selected"); %>>Client Filter Mode</option>
+													<option value="2" <% nvram_match_x("","adbyby_set", "2","selected"); %>>No Filter Mode</option>
 												</select>
 											</td>
 										</tr>
