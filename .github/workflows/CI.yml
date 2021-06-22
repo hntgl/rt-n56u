@@ -31,7 +31,7 @@ jobs:
           - build_variant: "mt7628"
             targets: "MI-NANO"
           - build_variant: "mt7621-usb"
-            targets: "MI-R3P"
+            targets: "NEWIFI3"
     steps:
       - uses: actions/checkout@v2
       - name: Prepare environment
