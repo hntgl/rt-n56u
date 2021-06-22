@@ -2,13 +2,13 @@ var helpcontent = new Array(5);
 var help_enable = '<% nvram_get_x("", "help_enable"); %>';
 
 helpcontent[0] = new Array("",
-				"Plus + 模式，过滤效果稍差,推荐全局模式</br>内网IP列表模式默认是不过滤所有IP的<br>请在内网控制选项里添加需要过滤的IP。",);
+				"Global Mode: The slowest and the best effects.</br>Plus + Mode: Filter domain name list and blacklist website. Recommended<br>No Filter Mode: Must set in Client Filter Mode Settings manually",);
 				
 helpcontent[1] = new Array("",
-				"1.作为dnsmasq的上游服务器(在AGH中统计到的ip都为127.0.0.1，无法统计客户端及对应调整设置)</br>2.重定向53端口到 AdGuardHome",);
+				"1. AGH as defaults upstream server of dnsmasq with the IP address of container are all 127.0.0.1</br>2. Redirect 53 port to AdGuardHome",);
 
 helpcontent[2] = new Array("",
-				"本工具是通过域名解析层来屏蔽广告和保护隐私的，其将各大著名的hosts，ad filter lists，adblock list等的列表进行合并去重，再进行一系列的抽象化，例如主动剔除失效域名、easylist优化模糊匹配、增强的黑白名单机制等措施，最终生成期望的高命中率列表。不建议和AD host同时打开。",);
+				"This tool uses the domain name resolution layer to block advertisements and protect privacy. It merges and removes the duplicates of the famous hosts, ad filter lists, adblock lists, etc., and then performs a series of abstractions, such as actively removing invalid domain names. , Easylist optimizes fuzzy matching, enhanced black and white list mechanism and other measures to finally generate the expected high hit rate list. It is not recommended to open it at the same time as AD host.",);
 
 function openTooltip(obj, hint_array_id, hint_show_id)
 {
