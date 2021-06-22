@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title><#Web_Title#> - Adblock Plus</title>
+<title><#Web_Title#> - Adblock</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
@@ -467,13 +467,13 @@ function changeBgColorrl(obj, num){
 									<div>Plus + version combination mode can operation with Adblock Plus Host,filtering ads without losing bandwidth</div>
 									<div>Anti-Adblock:<a href="https://github.com/privacy-protection-tools/anti-AD">https://github.com/privacy-protection-tools/anti-AD</a></div>
 									<div>Static rules：【<% nvram_get_x("", "adbyby_ltime"); %>】 | Video rules：【<% nvram_get_x("", "adbyby_vtime"); %>】</div>
-									<div>anti-AD rules：【<% nvram_get_x("", "anti_ad_count"); %>】item | Hosts AD：【<% nvram_get_x("", "adbyby_hostsad"); %>】item</div>
-									<div>Third party rules：【<% nvram_get_x("", "adbyby_user"); %>】item</div>
+									<div>Anti-AD  Blocker rules：【<% nvram_get_x("", "anti_ad_count"); %>】item | Hosts AD：【<% nvram_get_x("", "adbyby_hostsad"); %>】item</div>
+									<div>3rd-party Filers Rules：【<% nvram_get_x("", "adbyby_user"); %>】item</div>
 									<div> </div>
 									</div>
 									<table width="100%" align="center" cellpadding="4" cellspacing="0" class="table">
 										<tr >
-											<th width="50%">Enable Adbyby feature &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</th>
+											<th width="50%">Enable Adbyby? </th>
 											<td>
 													<div class="main_itoggle">
 													<div id="adbyby_enable_on_of">
@@ -493,7 +493,7 @@ function changeBgColorrl(obj, num){
 												<select name="adbyby_set" class="input">
 													<option value="0" <% nvram_match_x("","adbyby_set", "0","selected"); %>>Global Mode</option>
 													<option value="1" <% nvram_match_x("","adbyby_set", "1","selected"); %>>Plus + Mode </option>
-													<option value="2" <% nvram_match_x("","adbyby_set", "2","selected"); %>>No filter Mode</option>
+													<option value="2" <% nvram_match_x("","adbyby_set", "2","selected"); %>>Client Filter Mode</option>
 												</select>
 											</td>
 										</tr>
@@ -507,10 +507,10 @@ function changeBgColorrl(obj, num){
 												</select>
 												 <select name="adbyby_update_hour" id="adbyby_update_hour" class="input" style="width: 50px">
 
-                                                </select> Hour
+                                                </select> <#Hour#>
 												<select name="adbyby_update_min" id="adbyby_update_min" class="input" style="width: 50px">
 
-                                                </select> Minute
+                                                </select> <#Minute#>
 											</td>
 										</tr>
 										<tr>
@@ -530,7 +530,7 @@ function changeBgColorrl(obj, num){
 										</tr>
 										<tr>
 											<th width="50%">
-											<a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 2, 1);">Enable  anti-AD  Blocker?:</a></th>
+											<a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 2, 1);">Enable  Anti-AD  Blocker?:</a></th>
 											<td>
 													<div class="main_itoggle">
 													<div id="anti_ad_on_of">
@@ -626,8 +626,8 @@ function changeBgColorrl(obj, num){
                                             </td>
 											 <td width="20%">
                                           	<select name="adbybyip_ip_road_x_0" class="input" style="width: 110px">
-													<option value="0" <% nvram_match_x("","adbybyip_ip_road_x_0", "0","selected"); %>>No filter</option>
-													<option value="1" <% nvram_match_x("","adbybyip_ip_road_x_0", "1","selected"); %>>Global filter</option>
+													<option value="0" <% nvram_match_x("","adbybyip_ip_road_x_0", "0","selected"); %>>No Filter</option>
+													<option value="1" <% nvram_match_x("","adbybyip_ip_road_x_0", "1","selected"); %>>Global Mode</option>
 													<option value="2" <% nvram_match_x("","adbybyip_ip_road_x_0", "2","selected"); %>>Plus + Mode</option>
 												</select>
                                             </td>
@@ -680,8 +680,8 @@ function changeBgColorrl(obj, num){
                                             </td>
 											 <td width="10%">
                                           	<select name="adbybyrules_road_x_0" class="input" style="width: 80px">
-													<option value="0" <% nvram_match_x("","adbybyrules_road_x_0", "0","selected"); %>>Disable</option>
-													<option value="1" <% nvram_match_x("","adbybyrules_road_x_0", "1","selected"); %>>Enable</option>
+													<option value="0" <% nvram_match_x("","adbybyrules_road_x_0", "0","selected"); %>><#btn_Disabled#></option>
+													<option value="1" <% nvram_match_x("","adbybyrules_road_x_0", "1","selected"); %>><#btn_Enabled#></option>
 												</select>
                                             </td>
                                             <td width="5%">
