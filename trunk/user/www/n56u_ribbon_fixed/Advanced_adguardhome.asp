@@ -131,14 +131,14 @@ function done_validating(action){
 								<div class="row-fluid">
 									<div id="tabMenu" class="submenuBlock"></div>
 									<div class="alert alert-info" style="margin: 10px;">
-									<p>AdGuard Home It is a whole network advertisement blocking and anti-tracking software. After you install it, it will protect all your home equipment, and you no longer need to install any client software. With the rise of the Internet of Things and connected devices, it becomes more and more important to control your own entire network environment.
+									<p>AdGuard Home is a network-wide software for blocking ads & tracking. After you set it up, it'll cover ALL your home devices, and you don't need any client-side software for that.
 									</p>
-									AdGuard Home  主页<a href="https://adguard.com/" target="blank"><i><u>https://adguard.com/</u></i></a>
+									Home Page<a href="https://github.com/AdguardTeam/AdGuardHome" target="blank"><i><u>https://github.com/AdguardTeam/AdGuardHome</u></i></a>
 									</div>
 
 									<table width="100%" align="center" cellpadding="4" cellspacing="0" class="table">
 										<tr>
-											<th width="30%" style="border-top: 0 none;">Enable AdGuardHome</th>
+											<th width="30%" style="border-top: 0 none;">Enable AdGuardHome?</th>
 											<td style="border-top: 0 none;">
 													<div class="main_itoggle">
 													<div id="adg_enable_on_of">
@@ -153,17 +153,17 @@ function done_validating(action){
 										</tr>
 										</tr>
                                          <tr>
-											<th><a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 1, 1);">DNS redirection</a></th>
+											<th><a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 1, 1);">DNS Redirect</a></th>
 											<td>
-												<select name="adg_redirect" class="input" style="width: 200px">
-													<option value="0" <% nvram_match_x("","adg_redirect", "0","selected"); %>>no</option>
-													<option value="1" <% nvram_match_x("","adg_redirect", "1","selected"); %>>As the upstream server of dnsmasq</option>
-													<option value="2" <% nvram_match_x("","adg_redirect", "2","selected"); %>>Redirect port 53 to AdGuardHome</option>
+												<select name="adg_redirect" class="input" style="width: 230px">
+													<option value="0" <% nvram_match_x("","adg_redirect", "0","selected"); %>>None</option>
+													<option value="1" <% nvram_match_x("","adg_redirect", "1","selected"); %>>Run as dnsmasq upstream server</option>
+													<option value="2" <% nvram_match_x("","adg_redirect", "2","selected"); %>>Redirect 53 port to AdGuardHome</option>
 												</select>
 											</td>
 										</tr>
 										<tr>
-											<th>WEB management address:</th>
+											<th>Browser Management URL:</th>
 											<td>
 											<a href="http://<% nvram_get_x("", "lan_ipaddr"); %>:3030">http://<% nvram_get_x("", "lan_ipaddr"); %>:3030</a>
 											</td>
