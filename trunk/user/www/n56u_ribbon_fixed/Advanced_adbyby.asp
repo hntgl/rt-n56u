@@ -491,9 +491,9 @@ function changeBgColorrl(obj, num){
 											<a class="help_tooltip" href="javascript: void(0)" onmouseover="openTooltip(this, 0, 1);">Filtering scheme selection:</a></th>
 											<td>
 												<select name="adbyby_set" class="input">
-													<option value="0" <% nvram_match_x("","adbyby_set", "0","selected"); %>>Global mode (recommended), all IPs are filtered by adbyby</option>
-													<option value="1" <% nvram_match_x("","adbyby_set", "1","selected"); %>>Plus + mode (only filter the domain names in the list combined with the ABP list)</option>
-													<option value="2" <% nvram_match_x("","adbyby_set", "2","selected"); %>>Intranet IP list control mode</option>
+													<option value="0" <% nvram_match_x("","adbyby_set", "0","selected"); %>>Global Mode (The slowest and the best effects)</option>
+													<option value="1" <% nvram_match_x("","adbyby_set", "1","selected"); %>>Plus + Mode (Filter domain name list and blacklist website.Recommended)</option>
+													<option value="2" <% nvram_match_x("","adbyby_set", "2","selected"); %>>No filter Mode (Must set in Client Filter Mode Settings manually)</option>
 												</select>
 											</td>
 										</tr>
