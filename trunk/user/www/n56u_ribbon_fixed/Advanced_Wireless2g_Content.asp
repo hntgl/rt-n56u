@@ -322,12 +322,12 @@ function validate_wlphrase(s, v, obj){
                                             <td style="border-top: 0 none;">
                                                 <div class="main_itoggle">
                                                     <div id="rt_radio_x_on_of">
-                                                        <input type="checkbox" id="rt_radio_x_fake" <% nvram_match_x("","rt_radio_x", "1", "value=1 checked"); %><% nvram_match_x("","rt_radio_x", "0", "value=0"); %>>
+                                                        <input type="checkbox" class="cm-toggle" id="rt_radio_x_fake" <% nvram_match_x("","rt_radio_x", "1", "value=1 checked"); %><% nvram_match_x("","rt_radio_x", "0", "value=0"); %>>
                                                     </div>
                                                 </div>
                                                 <div style="position: absolute; margin-left: -10000px;">
-                                                    <input type="radio" value="1" id="rt_radio_x_1" name="rt_radio_x" class="input" <% nvram_match_x("","rt_radio_x", "1", "checked"); %>/><#checkbox_Yes#>
-                                                    <input type="radio" value="0" id="rt_radio_x_0" name="rt_radio_x" class="input" <% nvram_match_x("","rt_radio_x", "0", "checked"); %>/><#checkbox_No#>
+                                                    <input type="radio" class="cm-toggle" value="1" id="rt_radio_x_1" name="rt_radio_x" class="input" <% nvram_match_x("","rt_radio_x", "1", "checked"); %>/><#checkbox_Yes#>
+                                                    <input type="radio" class="cm-toggle" value="0" id="rt_radio_x_0" name="rt_radio_x" class="input" <% nvram_match_x("","rt_radio_x", "0", "checked"); %>/><#checkbox_No#>
                                                 </div>
                                             </td>
                                         </tr>
